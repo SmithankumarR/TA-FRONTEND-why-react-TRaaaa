@@ -1,20 +1,36 @@
-.container{
-    max-width: 1200px;
-    width: 100%;
-    padding: 2rem;
-    margin: 0 auto;
-    background-color: rgb(182, 179, 179);
+body {
+  background-color: rgb(243, 250, 142);
+  padding: 5rem;
 }
-.movieList{
-    max-width: 450px;
-    background-color: rgb(104, 104, 243);
-    color: white;
-    padding: 2rem;
-    border-radius: 1rem;
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
 }
-.movie h1{
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 600;
-    margin: 2rem;
+.movie {
+  max-width: 450px;
+  background-color: rgb(104, 104, 243);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.movie h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem;
+  font-weight: 600;
+}
+.movie input {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+  border: 0;
+  margin: 2rem 0;
+}
+li {
+  display: flex;
+  padding: 1rem;
+
+  justify-content: space-between;
 }
