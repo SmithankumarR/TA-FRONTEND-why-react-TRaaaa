@@ -1,0 +1,34 @@
+
+/* enter reset css */
+
+body{
+  background-color: rgb(245,175,125);
+}
+
+.container{
+  margin:0 auto;
+  height:400px;
+  width:400px;
+  background-color: rgb(155, 155, 253);
+  padding: 2rem;
+
+}
+form label{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+form input{
+  margin: 1rem auto;
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+  border: 0;
+}
+.movie-list li{
+  list-style: none;
+  display: flex;
+ 
+}
+.delete{
+  margin:30px;
+}
