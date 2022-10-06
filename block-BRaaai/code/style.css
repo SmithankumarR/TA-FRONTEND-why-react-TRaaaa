@@ -1,26 +1,71 @@
-body{
-    background-color: rgb(176, 168, 168);
+body {
+  background-color: rgb(176, 168, 168);
+  padding: 2rem;
 }
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 1rem;
-}
-.card{
-    max-width: 600px;
-    position: relative;
 
+.card {
+  max-width: 580px;
+  position: relative;
+  background-color: white;
+  margin: 0 auto;
 }
-.mark{
-    position: absolute;
-    background-color:rgb(231,76,58) ;
-    color: white;
-    width: 200px;
-    height: 200px;
-    bottom: 0;
+
+.cardInfo {
+  background-color: white;
+  margin: 0 auto;
+  padding: 1rem 2rem;
 }
-.date{
-    position: absolute;
-    border-radius: 50%;
+h1 {
+  text-align: center;
+}
+img {
+  width: 100%;
+}
+
+.mark {
+  background-color: rgb(231, 76, 58);
+  color: white;
+  width: 140px;
+  height: 50px;
+  bottom: 0;
+}
+
+.category {
+  position: absolute;
+  top: 21.1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+}
+
+.date {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 45px;
+  border-radius: 50%;
+  top: 1rem;
+  right: 1rem;
+}
+
+.comment span {
+  margin: 0 2rem;
+}
+
+.heading {
+  font-size: 2.4rem;
+}
+
+.subtitle {
+  color: rgb(231, 76, 58);
+  font-size: 2rem;
+}
+.cardInfo p {
+  color: rgb(181, 170, 170);
+  font-size: 1.6rem;
+  padding: 2rem 0;
 }
