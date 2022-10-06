@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container flex jsb">
+            <strong>Movie</strong>
+        </div>
+    </header>
+    <main>
+        <section class="sec-padding">
+            <div class="container card">
+                <h1>Movie list</h1>
+                <div class="flex center">
+                    <input type="text" placeholder="enter movie name" name="movie" id="movie" />
+                </div>
+                <div class="root flex jsb "></div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        let allMovies = [
+            {
+                name: 'Inception',
+                watched: false,
+            },
+            {
+                name: 'Matrix',
+                watched: false,
+            },
+            {
+                name: 'MightyShip',
+                watched: false,
+            },
+        ];
+
+        let input = document.querySelector('#movie');
+        let root = document.querySelector('.root');
+
+        let elem = React.createElement;
+
+        function createUI() {
+            //   console.log(root);
+            //   root.innerHTML = '';
+            let arr = allMovies.map((ele) => {
+                let div = elem(
+                    'div',
+                    {},
+                    elem('input', { type: 'checkbox', checked: ele.watched }),
+                    elem('h3', {}, ele.name),
+                    elem('h4', {}, ele.watched ? 'watched' : 'to watch')
+                );
+                // div.classList.add('movie-div');
+                //   return div;
+                return (
+                    <div>
+                        <input type="checkbox" checked={ele.watched} />
+                        <h3>{ele.name}</h3>
+                        <h4>{ele.watched ? 'watched' : 'to watch'}</h4>
+                    </div>
+                );
+                // let checkbox = document.createElement('input');
+                // checkbox.type = 'checkbox';
+                // checkbox.checked = ele.watched;
+                // checkbox.addEventListener('click', (event) => {
+                //   handleCheckbox(event);
+                // });
+                // let h3 = document.createElement('h3');
+                // h3.innerText = ele.name;
+                // let h4 = document.createElement('h4');
+                // if (ele.watched) {
+                //   h4.innerText = 'watched';
+                // } else {
+                //   h4.innerText = 'not watched';
+                // }
+
+                // div.append(checkbox, h3, h4);
+                // root.append(div);
+                // console.log(div);
+            });
+
+            ReactDOM.render(arr, root);
+        }
+
+        function handleCheckbox(event) {
+            console.dir(event.target.checked);
+            if (event.target.checked) {
+            }
+        }
+
+        function handleClickEvent(event) {
+            event.preventDefault();
+            console.log(event.keyCode);
+            if (event.keyCode === 13) {
+                let data = {
+                    name: event.target.value,
+                    watched: false,
+                };
+
+                allMovies.push(data);
+                createUI();
+            }
+        }
+
+        input.addEventListener('keyup', (event) => {
+            handleClickEvent(event);
+        });
+
+        createUI();
+    </script>
+</body>
+
+</html>

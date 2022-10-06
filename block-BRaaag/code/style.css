@@ -1,0 +1,58 @@
+header {
+    padding: 2rem 0;
+    background-color: rgb(12, 12, 51);
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .flex {
+    display: flex;
+  }
+  .jsb {
+    justify-content: space-between;
+  }
+  strong {
+    font-size: 2rem;
+    color: white;
+  }
+  header a {
+    color: white;
+  }
+  body {
+    background-color: gainsboro;
+  }
+  .sec-padding {
+    padding: 4rem 0;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+  }
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgb(248, 206, 102);
+    padding: 2rem;
+  }
+  
+  input {
+    padding: 1rem 0;
+    width: 100%;
+    
+  }
+  .movie-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: wheat;
+  }
+  .movie-div input {
+    width: auto;
+  }
