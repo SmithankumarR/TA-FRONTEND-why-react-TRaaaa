@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(176, 168, 168);
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1rem;
+}
+.card{
+    max-width: 600px;
+    position: relative;
+
+}
+.mark{
+    position: absolute;
+    background-color:rgb(231,76,58) ;
+    color: white;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+}
+.date{
+    position: absolute;
+    border-radius: 50%;
+}
