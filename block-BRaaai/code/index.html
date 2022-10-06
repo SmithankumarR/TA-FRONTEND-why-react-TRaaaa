@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- react -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
     <!-- reactDOM -->
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+
     <!-- babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="data.js"></script>
     <!-- font Awesome -->
-    <script src="https://kit.fontawesome.com/a0094d0aa6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a0094d0aa6.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Article card using JSX</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <h1 class="heading">ArticleCard</h1>
+    <div class="container" id="root"></div>
     <script type="text/babel">
-        <div className="container"></div>
-        // data for the card
-        let cardInfo = {
-            title: 'City Lights in New York',
-            date: new Date('2017-01-26'),
-            comments: 67,
-            subTitle: 'The city that never sleeps.',
-            description:
-                'New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.',
-            category: 'photos',
-            imageURL:
-                'https://images.unsplash.com/photo-1610874933184-7728fd666162?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-        };
-        // article card
-        let articleCard = <section className="card">
-            <img src={cardInfo.imageURL} alt={cardInfo.title} />
-            <h3 className="mark date">{cardInfo.date}</h3>;
-            <h3 className="mark">{cardInfo.category}</h3>;
-            <div>
-                <h1 className="heading">{cardInfo.title}</h1>
-                <h2 className="subtitle">{cardInfo.subTitle} </h2>
+      // article card
+      let articleCard = (
+        <section className="card">
+          <img src={cardInfo.imageURL} alt={cardInfo.title} />
 
-                <p>{cardInfo.description}</p>
+          <div className="date mark">
+            <span>
+              {cardInfo.date.getDate()} <br />
+              <small>
+                {cardInfo.date
+                  .toLocaleString('default', { month: 'long' })
+                  .slice(0, 3)}
+              </small>
+            </span>
+          </div>
 
-                <ul className="flex">
-                    <li><i class="fa-duotone fa-timer"></i> 6 mins ago </li>
-                    <li><i class="fa-light fa-comments"></i>{cardInfo.comments} comments</li>
-                </ul>
+          <div className="category mark">{cardInfo.category}</div>
+          
+          <article className="cardInfo">
+
+            <h2 className="heading">{cardInfo.title}</h2>
+            <h2 className="subtitle">{cardInfo.subTitle} </h2>
+            <p>{cardInfo.description}</p>
+
+            <div className="comment">
+              <span>6 mins ago</span>
+              <small>
+                <i class="fas fa-comments"></i> {cardInfo.comments} comments
+              </small>
             </div>
-        </section>
-        ReactDOM.render(articleCard, document.getElementsByClassName('container'))
-    </script>
-</body>
 
+          </article>
+        </section>
+      );
+      ReactDOM.render(articleCard, document.getElementById('root'));
+    </script>
+  </body>
 </html>
