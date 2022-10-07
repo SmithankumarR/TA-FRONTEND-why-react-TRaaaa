@@ -1,0 +1,177 @@
+body {
+  background-color: #FAFAF9;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 32px;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+.heading p {
+  font-weight: 300;
+}
+
+.container {
+  width: 400px;
+  margin: 5px;
+  border: 10px solid #F2F2F2;
+}
+
+.relative {
+  position: relative;
+}
+
+img {
+  width: 400px;
+  height: 200px;
+}
+
+.date {
+  margin-left: 340px;
+  position: absolute;
+  top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orangered;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: white;
+}
+
+.category {
+  top: 279px;
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  height: 40px;
+  width: 60px;
+  background-color: orangered;
+  color: white;
+}
+
+#root {
+  display: flex;
+
+}
+
+article {
+  padding: 10px 20px;
+}
+
+article h1 {
+  font-size: 23px;
+}
+
+article h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(252, 142, 58);
+}
+
+article p {
+  color: #92928ce2;
+  line-height: 1.9;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+body {
+  background-color: #FAFAF9;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 32px;
+  font-family: sans-serif;
+  font-weight: 900;
+}
+
+.heading p {
+  font-weight: 300;
+}
+
+.container {
+  width: 400px;
+  margin: 5px;
+  border: 10px solid #F2F2F2;
+}
+
+.relative {
+  position: relative;
+}
+
+.comment span {
+  margin: 0 1rem;
+}
+
+img {
+  width: 400px;
+  height: 200px;
+}
+
+.date {
+  margin-left: 340px;
+  position: absolute;
+  top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orangered;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: white;
+}
+
+.category {
+  top: 279px;
+  position: absolute;
+  text-align: center;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  height: 40px;
+  width: 60px;
+  background-color: orangered;
+  color: white;
+}
+
+#root {
+  display: flex;
+
+}
+
+article {
+  padding: 10px 20px;
+}
+
+article h1 {
+  font-size: 23px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+article h2 {
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  color: rgb(252, 142, 58);
+}
+
+article p {
+  color: #92928ce2;
+  line-height: 1.9;
+  font-size: 17px;
+  font-weight: 300;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
