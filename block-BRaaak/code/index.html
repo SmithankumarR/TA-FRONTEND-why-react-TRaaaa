@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- react -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <!-- reactDom -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="data.js"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/a0094d0aa6.js" crossorigin="anonymous"></script>
+    <title>Components and props</title>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>All Article </h1>
+        <p>Collection of best articles on Startups</p>
+    </div>
+    <div id="root">
+    </div>
+    <script type="text/babel">
+        let Card = (props) => {
+            return (
+                <div className="container">
+                    <img className="relative" src={props.cardInfo.imageURL} alt="" />
+                    <div className="date">
+                        <span >
+                            {props.cardInfo.date.getDate()} <br />
+                            <small>{props.cardInfo.date.toLocaleString('default', { month: 'long' }).slice(0, 3)}</small>
+                        </span>
+                    </div>
+                    <div className="category">
+                        {props.cardInfo.category}
+                    </div>
+                    <article>
+                        <h1>{props.cardInfo.title}</h1>
+                        <h2>{props.cardInfo.subTitle}</h2>
+                        <p>{props.cardInfo.description}</p>
+                        <div className="comment"><span>6 mins ago</span><small><i className="fas fa-comments"></i> {props.cardInfo.comments} comments</small></div>
+                    </article>
+                </div>)
+        }
+        function Articles() {
+            return articles.map((article) => <Card cardInfo={article} />)
+        }
+        ReactDOM.render(<Articles />, document.getElementById('root'))
+    </script>
+</body>
+
+</html>

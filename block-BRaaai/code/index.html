@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- react -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <!-- reactDOM -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+
+    <!-- babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="data.js"></script>
+    <!-- font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a0094d0aa6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Article card using JSX</title>
+  </head>
+
+  <body>
+    <h1 class="heading">ArticleCard</h1>
+    <div class="container" id="root"></div>
+    <script type="text/babel">
+      // article card
+      let articleCard = (
+        <section className="card">
+          <img src={cardInfo.imageURL} alt={cardInfo.title} />
+
+          <div className="date mark">
+            <span>
+              {cardInfo.date.getDate()} <br />
+              <small>
+                {cardInfo.date
+                  .toLocaleString('default', { month: 'long' })
+                  .slice(0, 3)}
+              </small>
+            </span>
+          </div>
+
+          <div className="category mark">{cardInfo.category}</div>
+          
+          <article className="cardInfo">
+
+            <h2 className="heading">{cardInfo.title}</h2>
+            <h2 className="subtitle">{cardInfo.subTitle} </h2>
+            <p>{cardInfo.description}</p>
+
+            <div className="comment">
+              <span>6 mins ago</span>
+              <small>
+                <i class="fas fa-comments"></i> {cardInfo.comments} comments
+              </small>
+            </div>
+
+          </article>
+        </section>
+      );
+      ReactDOM.render(articleCard, document.getElementById('root'));
+    </script>
+  </body>
+</html>
