@@ -1,7 +1,7 @@
 function Footer(){
     return <>
     <nav>
-        <small> All Rights are reserved @ 2022</small>
+        <small><p>&copy;2022,Gizmo</p>  All Rights are reserved @ 2022</small>
         <ul className= "navMenu">
             <li> facebook  </li>
             <li> Twitter </li>
