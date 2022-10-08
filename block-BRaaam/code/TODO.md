@@ -7,4 +7,7 @@
 - If you are using any drawing tools take screenshot and upload.
 
 - ![Twitter Layout](./twitter.jpg)
-- !![images/code-structure.jpg]
+```js
+- !(./images/sketchUI.jpg)
+- !(./images/TwitterLayout.jpg)
+```
