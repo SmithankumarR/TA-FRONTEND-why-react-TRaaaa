@@ -1,23 +1,10 @@
-#### Create Article Card Using JSX
-
-- Create a news app similar to the one give in preview (named Gizmo).
-- Break down the home page into different components.
-- It needs to have all these components `Header, Hero, Articles, Article, Footer`
-- Use the data given below to create the articles with different information
-- The blueprint for the UI is given. Follow the patterns given in the preview and add anything you want.
-
-#### Preview
-
-![Article Card](../assets/homepage.png)
-
-```js
-[
+var allArticles = [
   {
     author: 'Omkar Godbole',
     title:
       'Third Halving Turns Out to Be Non-Event for Bitcoin’s Price',
     description:
-      "Bitcoin's price volatility has declined following the network's third mining reward halving event on Monday.",
+      "Bitcoin's price volatility has declined following the network's third mining reward halving event on Monday",
     url:
       'https://www.coindesk.com/third-blockchain-halving-turns-out-non-event-bitcoins-price',
     urlToImage:
@@ -31,7 +18,7 @@
     title:
       'Gibraltar Financial Services Minister Talks ‘Staying Ahead’ on DLT',
     description:
-      'Gibraltar’s minister for digital and financial services spoke to Cointelegraph about regulating market manipulation in the blockchain sector.',
+      'Gibraltar’s minister for digital and financial services spoke to Cointelegraph about regulating market manipulation in the blockchain sector',
     url:
       'https://cointelegraph.com/news/gibraltar-financial-services-minister-talks-staying-ahead-on-dlt',
     urlToImage:
@@ -45,7 +32,7 @@
     title:
       "4 Reasons the Bitcoin Halving Won't Trigger a Big ‘Miner Capitulation’",
     description:
-      'Bitcoin miners are not likely to see capitulation and especially a “mining death spiral” after the 2020 halving due to four major reasons.',
+      'Bitcoin miners are not likely to see capitulation and especially a “mining death spiral” after the 2020 halving due to four major reasons',
     url:
       'https://cointelegraph.com/news/4-reasons-the-bitcoin-halving-wont-trigger-a-big-miner-capitulation',
     urlToImage:
@@ -59,14 +46,14 @@
     title:
       'Coronavirus-related Cyber Attacks jump 30% in past two weeks - TEISS',
     description:
-      'In the past two weeks, Check Point researchers have documented an average of 192,000 coronavirus-related cyber attacks per week, marking a 30% increase compared to previous weeks. Researchers found that a majority of these attacks start with phishing emails i…',
+      'In the past two weeks, Check Point researchers have documented an average of 192,000 coronavirus-related cyber attacks per week, marking a 30% increase compared to previous weeks. Researchers found that a majority of these attacks start with phishing emails',
     url:
       'https://www.teiss.co.uk/coronavirus-related-cyber-attacks-jump-30-in-past-two-weeks/',
     urlToImage:
       'https://s31405.pcdn.co/wp-content/uploads/2020/05/iStock-1177170875.jpg',
     publishedAt: '2020-05-12T11:04:00Z',
     content:
-      'The World Health Organizations name and logo is a popular choice for hackers to impersonate. Recently, cyber criminals sent malicious emails posing as the WHO from the domain who.int with the email subject Urgent letter from WHO: First human COVID-19 vaccine … [+4458 chars]',
+      'The World Health Organizations name and logo is a popular choice for hackers to impersonate. Recently, cyber criminals sent malicious emails posing as the WHO from the domain who.int with the email subject Urgent letter from WHO: First human COVID-19 vaccine [+4458 chars]',
   },
   {
     author: 'Nick Chong',
@@ -112,4 +99,5 @@
       'The crypto industry is relatively new. Because of that, people need time to adapt to it. You will find people that are skeptical about this subject. They believe that cryptocurrencies will never replace fiat money. More precisely, you will hear them saying th… [+6128 chars]',
   },
 ];
-```
+
+export default allArticles;

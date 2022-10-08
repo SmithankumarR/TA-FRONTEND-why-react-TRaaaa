@@ -1,13 +1,19 @@
-import Header from "./header";
-import Hero from "./hero";
-import Articles, { Card } from "./article";
-import Footer from "./footer";
-import '../styles/index.css';
+import Header from './header';
+import Hero from './hero';
+import Articles from './articles';
+import Footer from './footer';
 
 function App(props) {
-    return <>
-        <Header /> <Hero /> <Articles /> <Footer />
-    </>
+    return (
+        <>
+            <Header />
+            <main className='wrapper'>
+                <Hero />
+                <Articles  id="wrapperCard"/>
+            </main>
+            <Footer />
+        </>
+    ); 
 }
 
 export default App;
