@@ -1,0 +1,14 @@
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    color: orange;
+}
+.click{
+    background-color: orange;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    margin:2rem;
+    border: 0;
+    border-radius: 2rem;
+    color: white;
+}
