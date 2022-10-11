@@ -1,64 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="index.css" />
+    <!-- js -->
+    <script src="data.js"></script>
+    <title>onClick events</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body>
+    <h1 class="heading">Welcome to React Events</h1>
+    <div id="root"></div>
     <!-- React -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
     <!-- ReactDom -->
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
     <!-- babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- css -->
-    <link rel="stylesheet" href="index.css">
-    <!-- js -->
-    <script src="data.js"> </script>
-    <title>onClick events</title>
-</head>
 
-<body>
-    <h1 class="heading"> Welcome to React Events </h1>
-    <div id="root"></div>
     <script type="text/babel">
-        
-        function handleIntro(event) {
-            alert("Hello React Event")
-        }
-        function handleHelp(event) {
-            alert("How can I help you?")
-        }
-        function handleGreet(name, event) {
-            alert({ name })
-        }
-        let Btn = function (props) {
-
-        }
-        function allFruits() {
-            return <>
-                {
-                    fruits.map((fruit) => (
-                        <Fruit {...fruit} key={fruit.id} />
-                    ))
-                }
-            </>
-        }
-        let exampleBtn = <div className="events_btn">
-            <button className="click" onClick={handleIntro} > Introduction  </button>
-            <button className="click" onClick={handleHelp} > Help </button>
-            <button className="click" onClick={(event) => handleGreet(name, event)} > Arya </button>
-            <button className="click" onClick={(event) => handleGreet(name, event)} > John </button>
-            <button className="click" onClick={(event) => handleGreet(name, event)} > Bran </button>
-        </div>
-        function Fruit(props) {
-            return <>
-                <button className="click" onClick={fruits} > {props.value} </button>
-            </>
-        }
-
-        ReactDOM.render(exampleBtn, document.getElementById('root'))
+      let root = document.getElementById('root');
+      //   question 1
+      function Intro() {
+        return (
+          <button
+            className="click"
+            onClick={() => {
+              alert(`Hello REact Event`);
+            }}
+          >
+            Click Me
+          </button>
+        );
+      }
+      //   question 2
+      function Help() {
+        return (
+          <button
+            className="click"
+            onClick={() => {
+              alert(`To learn React use https://reactjs.org`);
+              alert('React and React-DOM works Together ');
+              alert('Babel helps us to write JSX ');
+            }}
+          >
+            How Can I Help You?
+          </button>
+        );
+      }
+    //   question 3
+      function Names() {
+        let names = ['Arya', 'John', 'Bran'];
+        return names.map((name) => (
+          <button className="click" onClick={() => alert(`Hello ${name}`)}>
+            {name}{' '}
+          </button>
+        ));
+      }
+    //   question 4
+      function Fruits() {
+        let fruits = [
+          { id: 'apple', value: '🍎 apple' },
+          { id: 'orange', value: '🍊 orange' },
+          { id: 'grape', value: '🍇 grape' },
+          { id: 'pear', value: '🍐 pear' },
+        ];
+        return fruits.map((fruit) => (
+          <button
+            className="click"
+            onClick={() => alert(`I Love ${fruit.value}`)}
+          >
+            {fruit.value}
+          </button>
+        ));
+      }
+      ReactDOM.render(
+        <>
+          <Intro />
+          <Help />
+          <Names />
+          <Fruits />
+        </>,
+        root
+      );
     </script>
-</body>
-
+  </body>
 </html>
