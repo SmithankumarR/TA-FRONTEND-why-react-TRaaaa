@@ -1,0 +1,20 @@
+.btn {
+    text-decoration: none;
+    font-size: 19px;
+    color: rgb(242, 243, 247);
+}
+
+.primary {
+    color: white;
+    background-color: #122386;
+    border: none;
+} 
+
+.small {
+    padding: 10px 40px;
+} 
+button {
+    display: block;
+    margin: 0 auto;
+    
+}
